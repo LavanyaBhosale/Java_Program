@@ -1,1 +1,41 @@
-
+//Code is for Bouncy number in java
+import java.util.Scanner;
+class Bouncy
+ {
+  public static void main(String[]args)
+  {
+    int num=123;
+	isBouncy( num);
+  }
+  public static void isBouncy(int num)
+  {
+   boolean incr=false;
+   boolean decr=false;
+   int last=num%10;
+   num/=10;
+   int seclast=num%10;
+   while(num>0)
+   {
+    if(last<seclast)
+	{
+		incr=true;
+	}
+	else if(seclast<last)
+	{
+		decr=true;
+	}
+	last=seclast;
+	 num/=10;
+	 seclast=num%10;
+	if(incr&&decr)
+	   break;
+   }
+   if(incr&&decr)
+	   System.out.println("Number is bouncy");
+   else
+	   System.out.println("Not a bouncy num");
+	 
+	
+  }
+ }
+ 
