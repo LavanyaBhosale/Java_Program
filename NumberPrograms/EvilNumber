@@ -1,0 +1,24 @@
+//This program is for EVIL number in java
+//Evil number when number of '1' are even in the given binary num
+import java.util.Scanner;
+class Evil
+{
+ public static void main(String[]args)
+ {
+   System.out.println("enter a binary num");
+   int num= new Scanner(System.in).nextInt();
+   int cnt=0;
+    while(num>0)
+    {
+	  int rem=num%10;
+	  if(rem==1)
+	  {
+	   cnt++;
+	  }
+    }
+	if(cnt%2==0)
+	   System.out.println("Number is evil:'))");
+	else
+	   System.out.println("Number is not evil");
+ }
+}
