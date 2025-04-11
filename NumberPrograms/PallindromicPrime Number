@@ -1,0 +1,36 @@
+// a number is pallindromic prime if it is a pallindrome as well as prime eg: 11
+import java.util.Scanner;
+ class Pallindromic
+ {
+  public static void main(String[]args)
+   {
+    int num=121;
+	if(num==Reverse(num) && isPrime(num));
+	 System.out.println("The number is pallindormic prime");
+	else
+	System.out.println("Not a pallindormic prime");
+   }
+   public static int Reverse(int num)
+   {
+   int rev=0;
+    while(num>0}
+	{
+	  rev=rev*10+num%10;
+	  num=num/10;
+	}
+	return rev;
+   }
+   public static boolean isPrime(int num)
+   {
+     int den=2;
+	 while(den<=num)
+	 {
+	  if(num%den==0)
+	  {
+	   break;}
+	  den++;
+	 }
+	 if(den==num)
+	 return true;
+   }
+  }
