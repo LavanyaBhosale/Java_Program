@@ -1,0 +1,21 @@
+ import java.util.Scanner;
+class ReverseNum
+{
+ public static void main(String[]args)
+ { 
+ int n=11199;int rev=0;
+   Rev(n,rev);
+ }
+ public static void Rev(int n,int rev)
+ {
+ if(n>0){
+  rev=rev*10+(n%10);
+  Rev(n/10,rev);
+ }
+ else if(n==0)
+ {
+   System.out.println(" "+rev);
+ }
+ return ;
+}
+}
