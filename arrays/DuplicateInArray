@@ -1,0 +1,25 @@
+//remove duplicates from a sorted array
+import java.util.HashSet;
+ class Duplicates
+  {
+    public static void main(String[]args)
+	{
+	 int arr[]={1,2,3,1,2};
+	 HashSet<Integer> s=new HashSet<>();
+	 int newSize=0;
+	 for(int i=0;i<arr.length;i++)
+	 {
+	   if(!s.contains(arr[i]))
+	   {
+	   s.add(arr[i]);
+	   arr[newSize]=arr[i];
+	   }
+	 }
+	 System.out.println("new unique arrays size"+newSize);
+	 System.out.print("new arrays ");
+	 for(int i=0;i<newSize;i++)
+	 {
+	   System.out.print("  "+arr[i]);
+	 }
+	}
+  }
