@@ -1,0 +1,30 @@
+//largest element in an array
+import java.util.Scanner;
+class largestElement
+{
+ public static void main(String[]args)
+  {
+   Scanner sc= new Scanner(System.in);
+   int arr[] = new int [6];int max=arr[0];
+   System.out.println("Enter 6 elemnts of type int for the array:");
+   for(int i=0;i<6;i++)
+   {
+    arr[i]=sc.nextInt();
+   }
+   for(int i=0;i<6;i++)
+   {
+     System.out.print("  "+arr[i]);
+   }
+   System.out.println();
+   for(int i=0;i<6;i++)
+   {
+     if(max<arr[i])
+	 {
+	  max=arr[i];
+	 }
+   }
+   System.out.println("the largest element is:"+max);
+   
+  
+  }
+}
