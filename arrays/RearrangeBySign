@@ -1,0 +1,38 @@
+//Alternative positive negative number starting with positive number first and the negative number
+//arr={1,-2,3,4,-1,-5}
+//arrnew={1,-2,3,-1,4,-5}
+
+import java.util.Scanner;
+class RearrangeBySign
+{
+  public static void main(String[]args)
+   {
+    int arr[]={1,-1,-1,2,3,4,-2,-3};
+    Rearrange(arr);
+   }
+   public static void Rearrange(int arr[])
+   {
+     int  n=arr.length;
+	 int newarr[]=new int[n];
+	 int pindex=0;
+	   int nindex=1;
+	 for(int i=0;i<n;i++)
+	 {    
+	   if(arr[i]<0)
+	   {
+	    newarr[nindex]=arr[i];
+		nindex+=2;
+	   }
+	   else 
+	    {
+        newarr[pindex]=arr[i];
+		pindex+=2;  
+	    }
+	 
+	}
+	 for(int i=0;i<n;i++)
+	 {
+	  System.out.print(" "+newarr[i]);
+	 }
+   }
+}
